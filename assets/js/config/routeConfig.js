@@ -13,6 +13,11 @@ angular.module('beer').config(function ($routeProvider) {
 	$routeProvider.when('/new', {
 		templateUrl: 'view/new.html',
 		controller: 'newBeerController',
+		resolve: {
+			countries: function (countriesAPI) {
+				return countriesAPI.getCountries();
+			},
+		}
 	});
 
 	$routeProvider.when('/details:id', {

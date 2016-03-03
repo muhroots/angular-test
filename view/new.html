@@ -16,10 +16,12 @@
 			<input type="text" class="field" name="style" id="style" ng-model="beer.style" ng-required="true" placeholder="Style">
 			<label for="style" class="alert" ng-show="newBeer.style.$invalid && !newBeer.style.$pristine">Invalid!</label>
 		</div>
-
+		
 		<div class="form-group">
-			<input type="text" class="field" name="country" id="country" ng-model="beer.country" ng-required="true" placeholder="Country">
-			<label for="name" class="alert" ng-show="newBeer.country.$invalid && !newBeer.country.$pristine">Invalid!</label>
+			<select class="field" name="country" id="country" ng-model="newBeer.country" ng-required="true" ng-options="country.code as country.name for country in countries | orderBy:'name'">
+				<option value="">Select a country</option>
+			</select>
+			<label for="country" class="alert" ng-show="newBeer.style.$invalid && !newBeer.style.$pristine">Invalid!</label>
 		</div>
 
 		<div class="form-group">
