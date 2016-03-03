@@ -1,4 +1,5 @@
 angular.module('beer').config(function ($routeProvider) {
+	
 	$routeProvider.when('/beers', {
 		templateUrl: 'view/beers.html',
 		controller: 'listBeerController',
@@ -24,5 +25,5 @@ angular.module('beer').config(function ($routeProvider) {
 		}
 	});
 
-	$routeProvider.otherwise({redirectTo: '/beers'})
+	$routeProvider.otherwise({redirectTo: '/beers'});
 });

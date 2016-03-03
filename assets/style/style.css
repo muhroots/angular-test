@@ -61,6 +61,7 @@ body {
 .table thead tr th > button {
 	border: none;
 	padding-right: 25px;
+	cursor: pointer;
 	background: transparent url('../image/orderby.png') right center no-repeat;
 	font-family: 'Droid Serif', serif;
 	font-weight: 700;
@@ -130,4 +131,19 @@ fieldset > legend {
 	border-color: #34495E;
 	outline: none;
 	color: #34495E;
+}
+
+/* alert */
+
+.alert {
+	padding: 10px;
+	margin: 2px 0;
+	display: block;
+	color: #D9534F;
+}
+
+/* helper */
+
+.center {
+	text-align: center;
 }
