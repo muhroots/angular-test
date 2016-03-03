@@ -2,14 +2,14 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Alcohol</th>
+			<th><button type="button" ng-click="order('alcohol')" ng-class="{reverse:reverse}">Alcohol</button></th>
 			<th>Style</th>
 			<th>Country</th>
 		</tr>
 	</thead>
 
 	<tbody>
-		<tr ng-repeat="beer in beers">
+		<tr ng-repeat="beer in beers | orderBy:predicate:reverse" >
 			<td>{{beer.name}}</td>
 			<td>{{beer.alcohol}}</td>
 			<td>{{beer.style}}</td>
@@ -19,3 +19,4 @@
 </table>
 
 <a href="#/new" class="btn">New beer</a>
+

@@ -58,6 +58,18 @@ body {
 	background-color: #F4F5F7;
 }
 
+.table thead tr th > button {
+	border: none;
+	padding-right: 25px;
+	background: transparent url('../image/orderby.png') right center no-repeat;
+	font-family: 'Droid Serif', serif;
+	font-weight: 700;
+	color: #FFF;
+}
+	.table thead tr th > button.reverse {
+		background-image: url('../image/orderby-reverse.png');
+	}
+
 /* button */
 
 .btn {
