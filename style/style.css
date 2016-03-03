@@ -1,0 +1,121 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Droid Serif', serif;
+	font-size: .9em;
+	background-color: #FAFAFA;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+
+}
+
+
+.container {
+	width: 840px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.header {
+	margin: 2em 0 1em;
+}
+
+.heading {
+	margin: 0;
+	font-size: 3.2em;
+	color: #34495E;
+
+}
+
+.app {
+	margin: 40px 0;
+}
+
+/* table */
+
+.table {
+	width: 100%;
+	background-color: #FFF;
+	box-shadow: 0 10px 45px rgba(0,0,0,.085); 
+    border-collapse: collapse;
+}
+
+.table thead tr th {
+	background-color: #34495E;
+	text-align: left;
+	font-weight: 700;
+	color: #FFF;
+}
+
+.table thead tr th,
+.table tbody tr td {
+	padding: 20px;
+}
+
+.table tbody tr:nth-child(2n) td {
+	background-color: #F4F5F7;
+}
+
+/* button */
+
+.btn {
+	width: 100%;
+	padding: 20px;
+	border: none;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.05);
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 700;
+	background-color: #E74C3C;
+	color: #FFF;
+}
+
+.btn:not([disabled]):focus,
+.btn:not([disabled]):hover {
+	outline: none;
+	opacity: .85;
+}
+
+.btn:disabled {
+	cursor: no-drop;
+    background: #CCC;
+}
+
+/* form */
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+fieldset > legend {
+	margin-bottom: 1em;
+	padding-left: 25px;
+	background: url('../image/beer.png') left center no-repeat;
+	font-size: 1.4em;
+	font-weight: 700;
+	color: #A7A7A7;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.field {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #CACACA;
+	font-family: 'Droid Serif', serif;
+}
+
+.field:focus {
+	border-color: #34495E;
+	outline: none;
+	color: #34495E;
+}

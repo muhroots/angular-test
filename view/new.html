@@ -1,0 +1,25 @@
+<form name="newBeer" method="post" ng-submit="addBeer(beer)">
+	<fieldset>
+		<legend>New beer</legend>
+
+		<div class="form-group">
+			<input type="text" class="field" name="name" ng-model="beer.name" ng-required="true" placeholder="Name">
+		</div>
+
+		<div class="form-group">
+			<input type="text" class="field" name="alcohol" ng-model="beer.alcohol" ng-required="true" placeholder="Alcohol">
+		</div>
+
+		<div class="form-group">
+			<input type="text" class="field" name="style" ng-model="beer.style" ng-required="true" placeholder="Style">
+		</div>
+
+		<div class="form-group">
+			<input type="text" class="field" name="country" ng-model="beer.country" ng-required="true" placeholder="Country">
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn" ng-disabled="newBeer.$invalid">Add beer</button>
+		</div>
+	</fieldset>
+</form>

@@ -1,0 +1,21 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Alcohol</th>
+			<th>Style</th>
+			<th>Country</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="beer in beers">
+			<td>{{beer.name}}</td>
+			<td>{{beer.alcohol}}</td>
+			<td>{{beer.style}}</td>
+			<td>{{beer.country}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<a href="#/new" class="btn">New beer</a>
