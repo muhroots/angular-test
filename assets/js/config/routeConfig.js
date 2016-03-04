@@ -1,5 +1,5 @@
 angular.module('beer').config(function ($routeProvider) {
-	
+
 	$routeProvider.when('/beers', {
 		templateUrl: 'view/beers.html',
 		controller: 'listBeerController',

@@ -1,0 +1,19 @@
+{
+  "name": "angularJS",
+  "description": "test bower",
+  "main": "index.html",
+  "moduleType": [],
+  "directory" : "lib",
+  "authors": [
+    "muhroots"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
