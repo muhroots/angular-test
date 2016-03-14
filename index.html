@@ -3,8 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>AngularJS</title>
+
+	<!-- font -->
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/style/bootstrap.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body ng-app="beer">
+	<section class="app">
+		<header class="header">
+			<div class="container">
+				<h1 class="heading">/Beers</h1>
+			</div>
+		</header>
+
+		<main class="container">
+			<div ng-view></div>
+		</main>	
+	</section>
+
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular-animate/angular-animate.js"></script>
+	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
 	<!-- app -->
 	<script src="assets/js/app.js"></script>
@@ -23,22 +44,5 @@
 
 	<!-- config -->
 	<script src="assets/js/value/valueConfig.js"></script>
-
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="assets/style/style.css">
-</head>
-<body ng-app="beer">
-	<section class="app">
-		<header class="header">
-			<div class="container">
-				<h1 class="heading">/Beers</h1>
-			</div>
-		</header>
-
-		<main class="container">
-			<div ng-view></div>
-		</main>	
-	</section>
 </body>
 </html>

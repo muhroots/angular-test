@@ -3,7 +3,7 @@
   "description": "test bower",
   "main": "index.html",
   "moduleType": [],
-  "directory" : "lib",
+  "directory": "lib",
   "authors": [
     "muhroots"
   ],
@@ -15,5 +15,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-ui": "^0.4.0"
+  }
 }
