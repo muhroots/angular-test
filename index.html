@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="beer">
+<html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<title>AngularJS</title>
@@ -10,17 +10,22 @@
 	<link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body ng-app="beer">
-	<section class="app">
-		<header class="header">
-			<div class="container">
-				<h1 class="heading">/Beers</h1>
-			</div>
-		</header>
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<ul>
+					<li class="nav-item"><a href="/" class="current">Beers</a></li>
+					<li class="nav-item"><a href="">Orders</a></li>
+					<li class="nav-item"><a href="">Customers</a></li>
+					<li class="nav-item"><a href="">Settings</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-		<main class="container">
-			<div ng-view></div>
-		</main>	
-	</section>
+	<main class="main container">
+		<div ng-view></div>
+	</main>	
 
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
@@ -31,15 +36,13 @@
 	<script src="assets/js/app.js"></script>
 
 	<!-- controllers -->
-	<script src="assets/js/controller/listBeerController.js"></script>
-	<script src="assets/js/controller/newBeerController.js"></script>
-	<script src="assets/js/controller/detailsBeerController.js"></script>
+	<script src="assets/js/controller/beerController.js"></script>
 
 	<!-- services -->
 	<script src="assets/js/service/beerAPI.js"></script>
 	<script src="assets/js/service/countryAPI.js"></script>
 
-	<!-- config -->
+	<!-- routes -->
 	<script src="assets/js/config/routeConfig.js"></script>
 
 	<!-- config -->

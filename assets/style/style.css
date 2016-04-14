@@ -10,44 +10,121 @@ body {
 	box-sizing: border-box;
 }
 
-
 .container {
 	width: 840px;
 	padding: 0 10px;
 	margin: 0 auto;
 }
 
+/* 
+ * HEADER
+ *
+ */
+
+
 .header {
-	margin: 2em 0 1em;
+	height: 65px;
+	margin: 0 0 2em;
+	background-color: #34495E;
 }
 
 .heading {
 	margin: 0;
-	font-size: 3.2em;
+	font-size: 28px;
 	font-weight: 700;
 	color: #34495E;
-
 }
 
-.app {
-	margin: 40px 0;
+.heading .sub {
+	font-size: 22px; 
+	color: #888;
 }
 
-/* table */
+.nav {
+	margin-top: 15px;
+}
+
+.nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.nav .nav-item {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.nav .nav-item > a {
+	display: block;
+	padding: 6px 15px;
+	border-radius: 20px;
+	line-height: 1.4;
+	font-size: 16px;
+	color: #FFF;	
+}
+
+.nav .nav-item > a:hover,
+.nav .nav-item > a:focus,
+.nav .nav-item > .current {
+	text-decoration: none;
+	background-color: #FFF;
+	color: #4A4A4A;
+}
+
+
+/*
+ * BODY
+ *
+ */
+
+.main {
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 10px 45px rgba(0,0,0,.085); 
+	background-color: #FFF;
+}
+
+.main .header {
+	height: inherit;
+	background-color: transparent;
+}
+
+
+/*
+ * BEER
+ *
+ */
+
+.beer-image {
+	max-width: 180px;
+	height: auto;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 4px double #E8E8E8;
+    background: #FFF;
+}
+
+.beer-content {
+	margin-top: 15px;
+    padding: 15px 0 15px 200px;
+	border-bottom: 4px double #E8E8E8;
+	border-top: 4px double #E8E8E8;
+}
+
+
+/*
+ * TABLE
+ *
+ */
 
 .table {
 	width: 100%;
 	margin-bottom: 0;
-	background-color: #FFF;
-	box-shadow: 0 10px 45px rgba(0,0,0,.085); 
-    border-collapse: collapse;
-}
+	background-color: #F4F5F7;
 
-.table thead tr th {
-	background-color: #34495E;
-	text-align: left;
-	font-weight: 700;
-	color: #FFF;
+    border-collapse: collapse;
 }
 
 .table thead tr th,
@@ -56,8 +133,17 @@ body {
 	padding: 20px;
 }
 
+.table thead tr th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FFF;
+	text-align: left;
+	font-weight: 700;
+	color: #4A4A4A;
+}
+
 .table tbody tr:nth-child(2n) td {
-	background-color: #F4F5F7;
+	background-color: #FFF;
 }
 
 .table tbody tr td > a {
@@ -74,13 +160,51 @@ body {
 	background: transparent url('../image/orderby.png') right center no-repeat;
 	font-family: 'Droid Serif', serif;
 	font-weight: 700;
-	color: #FFF;
+	color: #4A4A4A;
 }
-	.table thead tr th > button.reverse {
-		background-image: url('../image/orderby-reverse.png');
-	}
 
-/* button */
+.table thead tr th > button.reverse {
+	background-image: url('../image/orderby-reverse.png');
+}
+
+
+/*
+ * FORM
+ *
+ */
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.field {
+	width: 100%;
+	padding: 20px;
+	border: 1px solid #CACACA;
+	font-family: 'Droid Serif', serif;
+}
+
+select.field {
+	-webkit-appearance: none;	
+}
+
+.field:focus {
+	border-color: #34495E;
+	outline: none;
+	color: #34495E;
+}
+
+
+/*
+ * BUTTONS
+ *
+ */
 
 .btn {
 	width: 100%;
@@ -110,61 +234,28 @@ body {
     background: #CCC;
 }
 
-/* form */
 
-fieldset {
-	padding: 0;
-	margin: 0;
-	border: none;
-}
+/*
+ * VALIDATION
+ *
+ */
 
-fieldset > legend {
-	margin-bottom: 1em;
-	padding-left: 25px;
-	border-bottom: none;
-	background: url('../image/beer.png') left center no-repeat;
-	font-size: 1.4em;
-	font-weight: 700;
-	color: #A7A7A7;
-}
-
-.form-group {
-	margin-bottom: 20px;
-}
-
-.field {
-	width: 100%;
-	padding: 20px;
-	border: 1px solid #CACACA;
-	font-family: 'Droid Serif', serif;
-}
-
-select.field {
-	-webkit-appearance: none;	
-}
-
-.field:focus {
-	border-color: #34495E;
-	outline: none;
-	color: #34495E;
-}
-
-/* alert */
-
-.alert {
+.message {
 	padding: 10px;
 	margin: 2px 0;
 	display: block;
 	color: #D9534F;
 }
 
-/* helper */
+/*
+ * MODAL
+ *
+ */
 
-.center {
-	text-align: center;
+.modal .heading {
+	margin-bottom: 5px;
+	font-size: 32px;
 }
-
-/* modal */
 
 .modal-content {
 	border: none;
@@ -176,5 +267,55 @@ select.field {
 .modal-footer,
 .modal-body {
 	border: none;
-	padding: 15px;
+	padding: 20px;
+}
+
+.modal-body {
+	min-height: 220px;
+}
+
+.modal-title {
+	font-weight: 700;
+	font-size: 32px;
+}
+
+@media (min-width: 768px) {
+	.modal-dialog  {
+		width: 720px;
+	}
+}
+
+
+/*
+ * ANIMATIONS
+ *
+ */
+
+
+
+
+
+/*
+ * HELPERS
+ *
+ */
+
+.center {
+	text-align: center;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
