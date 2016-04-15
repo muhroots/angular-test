@@ -1,26 +1,28 @@
-<header class="header">
-	<h1 class="heading">/Beers</h1>
-</header>
+<main class="main container">
+	<header class="header">
+		<h1 class="heading">/Beers</h1>
+	</header>
 
-<table class="table">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th><button type="button" ng-click="order('alcohol')" ng-class="{reverse:reverse}">Alcohol</button></th>
-			<th>Style</th>
-			<th>Country</th>
-		</tr>
-	</thead>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th><button type="button" ng-click="order('alcohol')" ng-class="{reverse:reverse}">Alcohol</button></th>
+				<th>Style</th>
+				<th>Country</th>
+			</tr>
+		</thead>
 
-	<tbody>
-		<tr ng-repeat="beer in beers | orderBy:predicate:reverse">
-			<td><a href="" ng-click="showBeer(beer)">{{beer.name}}</a></td>
-			<td class="center">{{beer.alcohol}}</td>
-			<td>{{beer.style}}</td>
-			<td>{{beer.country}}</td>
-		</tr>
-	</tbody>
-</table>
+		<tbody>
+			<tr ng-repeat="beer in beers | orderBy:predicate:reverse">
+				<td><a href="" ng-click="showBeer(beer)">{{beer.name}}</a></td>
+				<td class="center">{{beer.alcohol}}</td>
+				<td>{{beer.style}}</td>
+				<td>{{beer.country}}</td>
+			</tr>
+		</tbody>
+	</table>
 
-<a href="#/new" class="btn">New beer</a>
+	<a href="#/new" class="btn">New beer</a>
+</main>
 
