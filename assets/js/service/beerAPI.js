@@ -12,8 +12,8 @@ angular.module('beer').factory('beersAPI', function ($http, config) {
 	};
 
 	return {
-		getBeer: _getBeer,
 		getBeers: _getBeers,
+		getBeer: _getBeer,		
 		saveBeer: _saveBeer,
 	};
 })

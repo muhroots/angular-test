@@ -1,0 +1,26 @@
+<main class="main container">
+	<header class="header">
+		<h1 class="heading">/Orders</h1>
+	</header>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Order ID</th>
+				<th><button type="button" ng-click="order('price')" ng-class="{reverse:reverse}">Price</button></th>
+				<th>Date</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="order in orders | orderBy:predicate:reverse">
+				<td><a href="">{{order.id}}</a></td>
+				<td>{{order.price}}</td>
+				<td>{{order.date}}</td>
+				<td>{{order.status}}</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+

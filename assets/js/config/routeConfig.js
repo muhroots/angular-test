@@ -1,6 +1,12 @@
-angular.module('beer').config(function ($routeProvider) {
+angular.module('beer').config(function ($routeProvider, $locationProvider) {
 
-	$routeProvider.when('/beers', {
+	/*
+	 * BEER
+	 *
+	 */
+
+	$routeProvider
+	.when('/beers', {
 		templateUrl: 'view/beers.html',
 		controller: 'listBeerController',
 		resolve: {
@@ -8,9 +14,9 @@ angular.module('beer').config(function ($routeProvider) {
 				return beersAPI.getBeers();
 			},
 		}
-	});
+	})
 
-	$routeProvider.when('/new', {
+	.when('/beers/new', {
 		templateUrl: 'view/new.html',
 		controller: 'newBeerController',
 		resolve: {
@@ -18,17 +24,28 @@ angular.module('beer').config(function ($routeProvider) {
 				return countriesAPI.getCountries();
 			},
 		}
-	});
+	})
 
-	$routeProvider.when('/details:id', {
-		templateUrl: 'view/details.html',
-		controller: 'detailsBeerController',
+	/*
+	 * ORDERS
+	 *
+	 */
+
+	.when('/orders', {
+		templateUrl: 'view/orders.html',
+		controller: 'listOrderController',
 		resolve: {
-			beer: function (beersAPI, $route) {
-				return beersAPI.getBeer($route.current.params.id)
-			}
+			orders: function (ordersAPI) {
+				return ordersAPI.getOrders();
+			},
 		}
+	})
+
+	.otherwise({
+		redirectTo: '/beers',
 	});
 
-	$routeProvider.otherwise({redirectTo: '/beers'});
+
+	// remove #
+	$locationProvider.html5Mode(true);
 });

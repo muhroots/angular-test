@@ -4,20 +4,24 @@
 	<meta charset="UTF-8">
 	<title>AngularJS</title>
 
+	<!-- base URL -->
+	<base href="/">
+
 	<!-- font -->
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/style/bootstrap.css">
 	<link rel="stylesheet" href="assets/style/style.css">
+
 </head>
 <body ng-app="beer">
 	<header class="header">
 		<div class="container">
 			<nav class="nav">
 				<ul>
-					<li class="nav-item"><a href="/" class="current">Beers</a></li>
-					<li class="nav-item"><a href="">Orders</a></li>
-					<li class="nav-item"><a href="">Customers</a></li>
-					<li class="nav-item"><a href="">Settings</a></li>
+					<li class="nav-item"><a href="/beers" current-navigation>Beers</a></li>
+					<li class="nav-item"><a href="/orders" current-navigation>Orders</a></li>
+					<li class="nav-item"><a href="" current-navigation>Customers</a></li>
+					<li class="nav-item"><a href="" current-navigation>Settings</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -36,9 +40,14 @@
 
 	<!-- controllers -->
 	<script src="assets/js/controller/beerController.js"></script>
+	<script src="assets/js/controller/orderController.js"></script>
+
+	<!-- directive -->
+	<script src="assets/js/directive/navigationDirective.js"></script>
 
 	<!-- services -->
 	<script src="assets/js/service/beerAPI.js"></script>
+	<script src="assets/js/service/orderAPI.js"></script>
 	<script src="assets/js/service/countryAPI.js"></script>
 
 	<!-- routes -->
