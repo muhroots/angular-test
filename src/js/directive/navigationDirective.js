@@ -5,7 +5,9 @@
 			scope.location = $location;
 
 			scope.$watch('location.path()', function(currentPath) {
-				if(currentPath === element[0].attributes['href'].nodeValue) {
+				var page = currentPath.split('/');
+
+				if('/' + page[1] === element[0].attributes['href'].nodeValue) {
 					element.addClass('current');
 				} else {
 					element.removeClass('current');

@@ -15,8 +15,8 @@
 
 		<tbody>
 			<tr ng-repeat="order in orders | orderBy:predicate:reverse">
-				<td><a href="">{{order.id}}</a></td>
-				<td>{{order.price}}</td>
+				<td>{{order.id}}</td>
+				<td>{{order.price | currency:"R$ "}}</td>
 				<td>{{order.date}}</td>
 				<td>{{order.status}}</td>
 			</tr>
